@@ -6,16 +6,14 @@
 <body>
   <h2>Loading Discord login...</h2>
   <script>
-    // ambil code dari URL
     const urlParams = new URLSearchParams(window.location.search);
     const code = urlParams.get("code");
 
     if (code) {
-      // simpan di localStorage biar dipake di index.html
       localStorage.setItem("discord_code", code);
-      window.location.href = "index.html"; // balik ke main page
+      window.location.href = "index.html"; 
     } else {
-      document.body.innerHTML = "<h3>Authorization gagal 😢</h3>";
+      document.body.innerHTML = "<h3>Authorization gagal </h3>";
     }
   </script>
 </body>
